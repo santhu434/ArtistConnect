@@ -1,7 +1,9 @@
 import { Button } from "@mui/material";
+import { useNavigate } from "react-router";
 import CustomTextField from "../FormComponents/CustomTextField.js";
 
 const SignUp = () => {
+    let navigate = useNavigate();
     return (<div>
         <h2 className="text-base font-normal text-[#A2A2A2] mb-2">LET'S GET YOU STARTED</h2>
         <h1 className="text-2xl font-bold mb-6">Create Fan Account</h1>
@@ -12,6 +14,9 @@ const SignUp = () => {
             <CustomTextField label="Password" type="password" />
             <Button
                 variant="contained"
+                onClick={() => {
+                    navigate("/onboard")
+                }}
                 sx={{
                     backgroundColor: "#C7643D",
                     color: "#fff",

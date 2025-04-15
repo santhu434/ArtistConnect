@@ -13,9 +13,9 @@ const LoginHome = () => {
         {/* Left Panel */}
         <div className="md:w-1/2 flex flex-col justify-center items-center text-center px-8 py-10">
             <div className="flex flex-col max-w-96">
-                <div className="flex flex-row gap-4 mb-8">
+                <div className="flex flex-row gap-4 mb-8 items-center">
                     <img src={logo} className="w-[64px] h-[64px]" alt="Logo" />
-                    <h1 className="font-inter text-4xl font-semibold text-[#B700D8] mb-4 flex items-center justify-center">
+                    <h1 className="font-inter text-4xl font-semibold text-[#B700D8] flex items-center justify-center">
                         ArtistConnect
                     </h1>
                 </div>
@@ -27,8 +27,8 @@ const LoginHome = () => {
         </div>
 
         {/* Right Panel - Form */}
-        <div className="md:w-1/2 flex justify-center items-center px-6 py-10 rounded-3xl">
-            <div className="w-full max-w-md bg-[#292929] rounded-md p-6">
+        <div className="md:w-1/2 flex justify-center items-center px-6 py-10 rounded-3xl ">
+            <div className="w-full max-w-md bg-[#292929] border-2 border-[#6B7280] rounded-2xl p-6">
                 {selectedComponent === "signup" ? <SignUp /> : <Login />}
 
                 {/* OR Divider */}
