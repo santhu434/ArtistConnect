@@ -1,7 +1,6 @@
 import SearchIcon from '@mui/icons-material/Search';
 import { alpha, Button, styled } from "@mui/material";
 import InputBase from '@mui/material/InputBase';
-import { useRef } from "react";
 import { useNavigate } from "react-router";
 import logo from "../../assets/icons/logo.svg";
 
@@ -49,23 +48,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 const Step2 = () => {
     let navigate = useNavigate();
-
-    const inputs = Array.from({ length: 5 }, () => useRef<HTMLInputElement>(null));
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, index: number) => {
-        const value = e.target.value;
-        if (/^\d?$/.test(value)) {
-            if (value && index < inputs.length - 1) {
-                inputs[index + 1].current?.focus();
-            }
-        }
-    };
-
-    const handleKeyDown = (e: any, index: number) => {
-        if (e.key === 'Backspace' && !e.currentTarget.value && index > 0) {
-            inputs[index - 1].current?.focus();
-        }
-    };
 
     return (<div className="min-h-screen flex flex-col md:flex-row bg-[#1B1C21] text-white">
         {/* Left Panel */}
