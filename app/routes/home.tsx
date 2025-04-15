@@ -1,13 +1,13 @@
+import Auth from "../components/auth/index.js";
 import type { Route } from "./+types/home";
-import  Login  from "../login/Login.js";
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ }: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "ArtistConnect" },
+    { name: "description", content: "Welcome to Artist Connect!" },
   ];
 }
 
 export default function Home() {
-  return <Login />;
+  return <Auth />;
 }

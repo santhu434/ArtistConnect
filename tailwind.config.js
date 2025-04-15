@@ -10,6 +10,8 @@ export default {
 
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
+        "Zen Kaku": ['Zen Kaku Gothic Antique', 'sans-serif'],
       },
     },
   },
