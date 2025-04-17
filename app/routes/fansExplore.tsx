@@ -14,193 +14,102 @@ import a0 from "../assets/images/Ellipse 3.png";
 import e1 from "../assets/images/image-1.png";
 import e2 from "../assets/images/image-2.png";
 import e0 from "../assets/images/image.png";
+
 const FansExplore = () => {
-    return (<>
+    return (
         <div className="min-h-screen flex flex-col bg-[#1B1C21] text-white">
-            {/* header */}
-            <div className="h-[88px] bg-gradient-to-r w-full from-[#650077] to-[#AE008E]">
-                <div className="flex flex-row justify-center h-full gap-4 mb-8 items-center">
-                    <img src={logowhite} className="w-[32px] h-[32px]" alt="Logo" />
-                    <h1 className="font-inter text-4xl font-semibold text-[#F9FAFB] flex items-center justify-center">
-                        ArtistConnect
-                    </h1>
-                </div>
-            </div>
-
-            {/* left navigation */}
-            <div className="flex-1 flex">
-                <div className="bg-[#292929] flex flex-col justify-between rounded-2xl m-6 flex-2/12 w-xs">
-                    <div className="  flex flex-col pt-40 pl-5">
-                        <NavLink to={"#"} className={"text-[#858585] font-medium text-base mb-4"}>HOME</NavLink>
-                        <NavLink to={"/fans/explore"} className={"text-[#FF3939] font-medium text-base mb-4"}>EXPLORE</NavLink>
-                        <NavLink to={"#"} className={"text-[#858585] font-medium text-base mb-4"}>ARTISTS</NavLink>
-                        <NavLink to={"#"} className={"text-[#858585] font-medium text-base mb-4"}>SHOP MERCH</NavLink>
-                        <NavLink to={"#"} className={"text-[#858585] font-medium text-base mb-4"}>MESSAGES</NavLink>
-
+            {/* Main Content */}
+            <div className="flex flex-col md:flex-row flex-1">
+                {/* Left Nav */}
+                <div className="bg-[#292929] md:rounded-2xl m-2 md:m-6 w-full md:w-3/12 lg:w-2/12 p-4 md:p-4 md:pt-40 flex flex-col justify-between">
+                    <div className="flex flex-col space-y-4">
+                        <NavLink to="#" className="text-[#858585] font-medium text-base">HOME</NavLink>
+                        <NavLink to="/fans/explore" className="text-[#FF3939] font-medium text-base">EXPLORE</NavLink>
+                        <NavLink to="/fans/artistprofile" className="text-[#858585] font-medium text-base">ARTISTS</NavLink>
+                        <NavLink to="#" className="text-[#858585] font-medium text-base">SHOP MERCH</NavLink>
+                        <NavLink to="#" className="text-[#858585] font-medium text-base">MESSAGES</NavLink>
                     </div>
-                    <div className="p-8">
-                        <NavLink to={"/fans/profile"} className={"flex justify-center items-center"}>
+                    <div className="mt-10 md:p-8">
+                        <NavLink to="/fans/profile" className="flex items-center">
                             <Avatar sx={{ bgcolor: deepOrange[500] }}>TA</Avatar>
-                            <span className="text-[#858585] font-medium text-base ml-3">Tharik Akbar</span>
+                            <span className="text-[#858585] font-medium text-base ml-3 hidden md:inline">Tharik Akbar</span>
                         </NavLink>
                     </div>
                 </div>
 
-                {/* Right content */}
-                <div className="mt-4 ml-2  flex-10/12 w-xs">
+                {/* Right Content */}
+                <div className="flex-1 mt-4 md:ml-2 px-4 md:px-0">
                     {/* Live Now */}
                     <div>
                         <h3 className="text-[#FF3939] font-bold text-xl">Live Now</h3>
-                        <span className="text-white font-normal text-lg">Real-time live broadcasts happening</span>
-                        <div className="my-3  flex ">
-
-                            <div className=' mx-1 text-center'>
-                                <span className='relative text-center gap-2'>
-                                    <img className="w-16 h-16 mx-auto border-[#AE008E] border-2 rounded-full" src={a1} alt="Artist 1" />
-                                    <div className='bg-[#FF3939] absolute -mt-5 -translate-x-[50%] top-[80%] left-[50%] text-[10.6px] font-normal w-min flex px-1 mx-auto rounded-full justify-center items-center'> <VideocamIcon fontSize='small' />LIVE</div>
-                                </span>
-                                <span className='text-[#D8D8D8] text-center relative w-full font-normal text-sm'>Taylor Swift</span>
-                            </div>
-                            <div className=' mx-1 text-center'>
-                                <span className='relative text-center gap-2'>
-                                    <img className="w-16 h-16 mx-auto border-[#AE008E] border-2 rounded-full" src={a2} alt="Artist 1" />
-                                    <div className='bg-[#FF3939] absolute -mt-5 -translate-x-[50%] top-[80%] left-[50%] text-[10.6px] font-normal w-min flex px-1 mx-auto rounded-full justify-center items-center'> <VideocamIcon fontSize='small' />LIVE</div>
-                                </span>
-                                <span className='text-[#D8D8D8] text-center relative w-full font-normal text-sm'>The Weeknd</span>
-                            </div>
-                            <div className=' mx-1 text-center'>
-                                <span className='relative text-center gap-2'>
-                                    <img className="w-16 h-16 mx-auto border-[#AE008E] border-2 rounded-full" src={a3} alt="Artist 1" />
-                                    <div className='bg-[#FF3939] absolute -mt-5 -translate-x-[50%] top-[80%] left-[50%] text-[10.6px] font-normal w-min flex px-1 mx-auto rounded-full justify-center items-center'> <VideocamIcon fontSize='small' />LIVE</div>
-                                </span>
-                                <span className='text-[#D8D8D8] text-center relative w-full font-normal text-sm'>BTS</span>
-                            </div>
-                            <div className=' mx-1 text-center'>
-                                <span className='relative text-center gap-2'>
-                                    <img className="w-16 h-16 mx-auto border-[#AE008E] border-2 rounded-full" src={a4} alt="Artist 1" />
-                                    <div className='bg-[#FF3939] absolute -mt-5 -translate-x-[50%] top-[80%] left-[50%] text-[10.6px] font-normal w-min flex px-1 mx-auto rounded-full justify-center items-center'> <VideocamIcon fontSize='small' />LIVE</div>
-                                </span>
-                                <span className='text-[#D8D8D8] text-center relative w-full font-normal text-sm'>Bruno Mars</span>
-                            </div>
+                        <p className="text-white font-normal text-lg">Real-time live broadcasts happening</p>
+                        <div className="my-3 flex flex-wrap gap-3">
+                            {[a1, a2, a3, a4].map((img, idx) => {
+                                const names = ["Taylor Swift", "The Weeknd", "BTS", "Bruno Mars"];
+                                return (
+                                    <div key={idx} className="text-center">
+                                        <div className="relative">
+                                            <img className="w-16 h-16 mx-auto border-[#AE008E] border-2 rounded-full" src={img} alt={`Artist ${idx}`} />
+                                            <div className="bg-[#FF3939] absolute -mt-5 -translate-x-[50%] top-[80%] left-[50%] text-[10.6px] font-normal flex px-1 rounded-full items-center">
+                                                <VideocamIcon fontSize='small' /> LIVE
+                                            </div>
+                                        </div>
+                                        <span className="text-[#D8D8D8] text-sm block mt-1">{names[idx]}</span>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
-                    <div className='mr-10'>
-                        <div className='flex justify-between items-center'>
+
+                    {/* Popular Artists */}
+                    <div className="mt-8">
+                        <div className="flex justify-between items-center">
                             <h3 className="text-[#FF3939] font-bold text-xl">Popular Artists</h3>
-                            <span className='text-[#858585] text-base font-medium'>Show all</span>
+                            <span className="text-[#858585] text-base font-medium md:hidden">Show all</span>
                         </div>
-                        <div className='flex'>
-                            <div className=' px-2 flex flex-col items-start'>
-                                <img className='m-w-36 m-h-36' src={a0} alt="Artist 1" />
-                                <span className='text-[#D8D8D8] text-center font-normal text-lg'>Billie Eilish</span>
-                                <span className='font-normal text-[#A2A2A2] text-base'>Artist</span>
-                            </div>
-                            <div className=' px-2 flex flex-col items-start'>
-                                <img className='m-w-36 m-h-36' src={a1} alt="Artist 1" />
-                                <span className='text-[#D8D8D8] text-center font-normal text-lg'>Taylor Swift</span>
-                                <span className='font-normal text-[#A2A2A2] text-base'>Artist</span>
-                            </div>
-                            <div className=' px-2 flex flex-col items-start'>
-                                <img className='m-w-36 m-h-36' src={a2} alt="Artist 1" />
-                                <span className='text-[#D8D8D8] text-center font-normal text-lg'>The Weeknd</span>
-                                <span className='font-normal text-[#A2A2A2] text-base'>Artist</span>
-                            </div>
-                            <div className=' px-2 flex flex-col items-start'>
-                                <img className='m-w-36 m-h-36' src={a3} alt="Artist 1" />
-                                <span className='text-[#D8D8D8] text-center font-normal text-lg'>BTS</span>
-                                <span className='font-normal text-[#A2A2A2] text-base'>Artist</span>
-                            </div>
-                            <div className=' px-2 flex flex-col items-start'>
-                                <img className='m-w-36 m-h-36' src={a4} alt="Artist 1" />
-                                <span className='text-[#D8D8D8] text-center font-normal text-lg'>Bruno Mars</span>
-                                <span className='font-normal text-[#A2A2A2] text-base'>Artist</span>
-                            </div>
-                            <div className=' px-2 flex flex-col items-start'>
-                                <img className='m-w-36 m-h-36' src={a5} alt="Artist 1" />
-                                <span className='text-[#D8D8D8] text-center font-normal text-lg'>Lady Gaga</span>
-                                <span className='font-normal text-[#A2A2A2] text-base'>Artist</span>
-                            </div>
-                            <div className=' px-2 flex flex-col items-start'>
-                                <img className='m-w-36 m-h-36' src={a6} alt="Artist 1" />
-                                <span className='text-[#D8D8D8] text-center font-normal text-lg'>Taylor Swift</span>
-                                <span className='font-normal text-[#A2A2A2] text-base'>Artist</span>
-                            </div>
-                            <div className=' px-2 flex flex-col items-start'>
-                                <img className='m-w-36 m-h-36' src={a7} alt="Artist 1" />
-                                <span className='text-[#D8D8D8] text-center font-normal text-lg'>Billie Eilish</span>
-                                <span className='font-normal text-[#A2A2A2] text-base'>Artist</span>
-                            </div>
+                        <div className="flex overflow-x-auto gap-4 py-4">
+                            {[a0, a1, a2, a3, a4, a5, a6, a7].map((img, idx) => {
+                                const names = [
+                                    "Billie Eilish", "Taylor Swift", "The Weeknd", "BTS",
+                                    "Bruno Mars", "Lady Gaga", "Taylor Swift", "Billie Eilish"
+                                ];
+                                return (
+                                    <div key={idx} className="min-w-[100px] flex-shrink-0">
+                                        <img className="w-24 h-24 object-cover rounded-full" src={img} alt={`Artist ${idx}`} />
+                                        <span className="block text-[#D8D8D8] font-normal text-sm mt-1">{names[idx]}</span>
+                                        <span className="text-[#A2A2A2] text-xs">Artist</span>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
-                    <div className='mr-10 mt-5'>
-                        <div className='flex justify-between items-center'>
-                            <h3 className="text-[#FF3939] font-bold text-xl">Upcoming Events</h3>
-                            <span className='text-[#858585] text-base font-medium'>Show all</span>
-                        </div>
-                        <div className='flex  mt-3'>
-                            <div className='p-2 rounded-sm bg-[#292929] w-max mx-2'>
-                                <img className='w-56 h-44' src={e0} alt="Event" />
-                                <div className='font-semibold text-lg text-white mt-2'>Neon Dreams Tour - ZYRA</div>
-                                <div className='font-normal text-sm text-[#D8D8D8] mt-2'>
-                                    Pulse Theatre,<br />
-                                    Singapore
-                                </div>
-                                <div className='font-normal text-sm text-[#D8D8D8] mt-2'>
-                                    November 10 ,2025
-                                </div>
-                                <div className='font-normal text-sm text-[#D8D8D8] mt-2'>
-                                    RM 150.00
-                                </div>
-                            </div>
 
-                            <div className='p-2 rounded-sm bg-[#292929] w-max mx-2'>
-                                <img className='w-56 h-44' src={e0} alt="Event" />
-                                <div className='font-semibold text-lg text-white mt-2'>Cosmic Flow - AURA Live </div>
-                                <div className='font-normal text-sm text-[#D8D8D8] mt-2'>
-                                    Moonlight Dome, <br />
-                                    KL
+                    {/* Upcoming Events */}
+                    <div className="mt-8">
+                        <div className="flex justify-between items-center">
+                            <h3 className="text-[#FF3939] font-bold text-xl">Upcoming Events</h3>
+                            <span className="text-[#858585] text-base font-medium md:hidden">Show all</span>
+                        </div>
+                        <div className="flex overflow-x-auto gap-4 py-4">
+                            {[{ img: e0, title: "Neon Dreams Tour - ZYRA", venue: "Pulse Theatre, Singapore" },
+                            { img: e0, title: "Cosmic Flow - AURA Live", venue: "Moonlight Dome, KL" },
+                            { img: e1, title: "Skyline Beats - DJ VONN", venue: "Pulse Theatre, Singapore" },
+                            { img: e2, title: "Skyline Beats - DJ VONN", venue: "Pulse Theatre, Singapore" }
+                            ].map((event, idx) => (
+                                <div key={idx} className="bg-[#292929] rounded-md p-3 min-w-[240px]">
+                                    <img className="w-full h-44 object-cover rounded" src={event.img} alt="Event" />
+                                    <div className="text-white font-semibold text-base mt-2">{event.title}</div>
+                                    <div className="text-[#D8D8D8] text-sm mt-1">{event.venue}</div>
+                                    <div className="text-[#D8D8D8] text-sm mt-1">November 10, 2025</div>
+                                    <div className="text-[#D8D8D8] text-sm mt-1">RM 150.00</div>
                                 </div>
-                                <div className='font-normal text-sm text-[#D8D8D8] mt-2'>
-                                    November 10 ,2025
-                                </div>
-                                <div className='font-normal text-sm text-[#D8D8D8] mt-2'>
-                                    RM 150.00
-                                </div>
-                            </div>
-                            <div className='p-2 rounded-sm bg-[#292929] w-max mx-2'>
-                                <img className='w-56 h-44' src={e1} alt="Event" />
-                                <div className='font-semibold text-lg text-white mt-2'>Skyline Beats - DJ VONN</div>
-                                <div className='font-normal text-sm text-[#D8D8D8] mt-2'>
-                                    Pulse Theatre,<br />
-                                    Singapore
-                                </div>
-                                <div className='font-normal text-sm text-[#D8D8D8] mt-2'>
-                                    November 10 ,2025
-                                </div>
-                                <div className='font-normal text-sm text-[#D8D8D8] mt-2'>
-                                    RM 150.00
-                                </div>
-                            </div>
-                            <div className='p-2 rounded-sm bg-[#292929] w-max mx-2'>
-                                <img className='w-56 h-44' src={e2} alt="Event" />
-                                <div className='font-semibold text-lg text-white mt-2'>Skyline Beats - DJ VONN</div>
-                                <div className='font-normal text-sm text-[#D8D8D8] mt-2'>
-                                    Pulse Theatre,<br />
-                                    Singapore
-                                </div>
-                                <div className='font-normal text-sm text-[#D8D8D8] mt-2'>
-                                    November 10 ,2025
-                                </div>
-                                <div className='font-normal text-sm text-[#D8D8D8] mt-2'>
-                                    RM 150.00
-                                </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </>);
+    );
 }
 
 export default FansExplore;

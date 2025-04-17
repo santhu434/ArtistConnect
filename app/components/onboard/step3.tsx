@@ -64,12 +64,6 @@ const Step3 = () => {
         {/* Left Panel */}
         <div className="md:w-1/2 flex flex-col justify-center items-center text-center px-8 py-10">
             <div className="flex flex-col max-w-96">
-                <div className="flex flex-row gap-4 mb-8 items-center">
-                    <img src={logo} className="w-[64px] h-[64px]" alt="Logo" />
-                    <h1 className="font-inter text-4xl font-semibold text-[#B700D8] flex items-center justify-center">
-                        ArtistConnect
-                    </h1>
-                </div>
                 <h2 className="text-4xl font-bold text-left mb-2">Welcome</h2>
                 <p className="text-gray-400 text-base font-normal text-left max-w-80">
                     Let’s personalize your experience.

@@ -3,14 +3,11 @@ import Step1 from "./step1";
 import Step2 from "./step2";
 import Step3 from "./step3";
 
-
-
 type Props = {
 
 }
 export const OnboardComponent = ({ }: Props) => {
     const { id } = useParams()
-
     switch (id) {
         case "1":
             return <Step1 />

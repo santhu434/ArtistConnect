@@ -15,7 +15,7 @@ const SignUp = () => {
             <Button
                 variant="contained"
                 onClick={() => {
-                    navigate("/onboard")
+                    navigate("/onboard/1")
                 }}
                 sx={{
                     backgroundColor: "#C7643D",

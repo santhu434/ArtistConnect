@@ -8,6 +8,7 @@ export default [
     route("/onboard/:id", "routes/onboard.tsx"),
     route("/fans/explore", "routes/fansExplore.tsx"),
     route("/fans/profile", "routes/fansProfile.tsx"),
+    route("/fans/artistprofile", "routes/fansArtistProfile.tsx"),
     route("/artist", "routes/artist.tsx"),
     route("/admin", "routes/admin.tsx"),
 ] satisfies RouteConfig;
