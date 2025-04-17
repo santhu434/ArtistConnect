@@ -27,7 +27,7 @@ const LoginHome = () => {
         </div>
 
         {/* Right Panel - Form */}
-        <div className="md:w-1/2 flex justify-center items-center px-6 py-10 rounded-3xl ">
+        <div className="md:w-1/2 flex justify-center items-center px-6 rounded-3xl ">
             <div className="w-full max-w-md bg-[#292929] border-2 border-[#6B7280] rounded-2xl p-6">
                 {selectedComponent === "signup" ? <SignUp /> : <Login />}
 

@@ -96,7 +96,7 @@ const Step3 = () => {
                 </Search>
 
                 {/* List Genre */}
-                <div className="my-4 mt-12 grid gap-2 grid-cols-4 grid-rows-2">
+                <div className="my-4 mt-12 grid gap-2 grid-cols-2 md:grid-cols-4">
 
                     <div className=' '>
                         <img src={a0} alt="Artist 1" />

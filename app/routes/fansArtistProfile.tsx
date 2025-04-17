@@ -5,6 +5,7 @@ import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import SearchIcon from '@mui/icons-material/Search';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import React from 'react';
+import { useNavigate } from 'react-router';
 import a2 from '../assets/images/Ellipse 3-2.png';
 import e1 from '../assets/images/image-1.png';
 import e2 from '../assets/images/image-2.png';
@@ -30,6 +31,8 @@ const ShopCard = ({ title, img, price }: { title: string; img: string; price: st
 );
 
 const ArtistProfile: React.FC = () => {
+
+  const navigate = useNavigate()
   const topHits = [
     { img: e2, title: 'Locked out of Heaven', duration: '2:49' },
     { img: e1, title: 'Just the way you are.', duration: '2:49' },
@@ -148,7 +151,7 @@ const ArtistProfile: React.FC = () => {
           <HomeFilledIcon sx={{ color: "#AAAAAA" }} />
           <div className='text-xs font-medium text-[#AAAAAA]'>HOME</div>
         </div>
-        <div className='flex flex-col items-center px-5 py-3'>
+        <div onClick={() => navigate("/fans/explore/")} className='flex flex-col items-center px-5 py-3'>
           <SearchIcon sx={{ color: "#AAAAAA" }} />
           <div className='text-xs font-medium text-[#AAAAAA]'>EXPLORE</div>
         </div>

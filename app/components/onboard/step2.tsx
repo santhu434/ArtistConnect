@@ -85,30 +85,30 @@ const Step2 = () => {
                 </Search>
 
                 {/* List Genre */}
-                <div className="my-4 mt-12 grid gap-2 grid-cols-4 grid-rows-2">
+                <div className="my-4 mt-12 grid gap-2 grid-cols-2 md:grid-cols-4 items-center">
 
-                    <div className='w-24 h-24 relative border-[#6B7280] border-[3px] rounded-full bg-gradient-to-b from-[#FF6FD8] to-[#3813C2]'>
+                    <div className='mx-auto w-24 h-24 relative border-[#6B7280] border-[3px] rounded-full bg-gradient-to-b from-[#FF6FD8] to-[#3813C2]'>
                         <span className='font-semibold text-base absolute top-[50%] left-[50%] -translate-1/2'>Pop</span>
                     </div>
-                    <div className='w-24 h-24 relative border-[#6B7280] border-[3px] rounded-full bg-gradient-to-b from-[#D43030] to-[#434343]'>
+                    <div className='mx-auto w-24 h-24 relative border-[#6B7280] border-[3px] rounded-full bg-gradient-to-b from-[#D43030] to-[#434343]'>
                         <span className='font-semibold text-base absolute top-[50%] left-[50%] -translate-1/2 !whitespace-nowrap'>Hip-Hop</span>
                     </div>
-                    <div className='w-24 h-24 relative border-[#6B7280] border-[3px] rounded-full bg-gradient-to-b from-[#FF4E50] to-[#F9D423]'>
+                    <div className='mx-auto w-24 h-24 relative border-[#6B7280] border-[3px] rounded-full bg-gradient-to-b from-[#FF4E50] to-[#F9D423]'>
                         <span className='font-semibold text-base absolute top-[50%] left-[50%] -translate-1/2'>Rock</span>
                     </div>
-                    <div className='w-24 h-24 relative border-[#6B7280] border-[3px] rounded-full bg-gradient-to-b from-[#8E2DE2] to-[#4A00E0]'>
+                    <div className='mx-auto w-24 h-24 relative border-[#6B7280] border-[3px] rounded-full bg-gradient-to-b from-[#8E2DE2] to-[#4A00E0]'>
                         <span className='font-semibold text-base absolute top-[50%] left-[50%] -translate-1/2'>R&B</span>
                     </div>
-                    <div className='w-24 h-24 relative border-[#6B7280] border-[3px] rounded-full bg-gradient-to-b from-[#00F260] to-[#0575E6]'>
+                    <div className='mx-auto w-24 h-24 relative border-[#6B7280] border-[3px] rounded-full bg-gradient-to-b from-[#00F260] to-[#0575E6]'>
                         <span className='font-semibold text-base absolute top-[50%] left-[50%] -translate-1/2'>Electronic</span>
                     </div>
-                    <div className='w-24 h-24 relative border-[#6B7280] border-[3px] rounded-full bg-gradient-to-b from-[#F7971E] to-[#FFD200]'>
+                    <div className='mx-auto w-24 h-24 relative border-[#6B7280] border-[3px] rounded-full bg-gradient-to-b from-[#F7971E] to-[#FFD200]'>
                         <span className='font-semibold text-base absolute top-[50%] left-[50%] -translate-1/2'>Indie</span>
                     </div>
-                    <div className='w-24 h-24 relative border-[#6B7280] border-[3px] rounded-full bg-gradient-to-b from-[#FC466B] to-[#3F5EFB]'>
+                    <div className='mx-auto w-24 h-24 relative border-[#6B7280] border-[3px] rounded-full bg-gradient-to-b from-[#FC466B] to-[#3F5EFB]'>
                         <span className='font-semibold text-base absolute top-[50%] left-[50%] -translate-1/2'>EDM</span>
                     </div>
-                    <div className='w-24 h-24 relative border-[#6B7280] border-[3px] rounded-full bg-gradient-to-b from-[#FDC830] to-[#F37335]'>
+                    <div className='mx-auto w-24 h-24 relative border-[#6B7280] border-[3px] rounded-full bg-gradient-to-b from-[#FDC830] to-[#F37335]'>
                         <span className='font-semibold text-base absolute top-[50%] left-[50%] -translate-1/2'>Afrobeat</span>
                     </div>
                 </div>

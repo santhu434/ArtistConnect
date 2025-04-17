@@ -9,7 +9,6 @@ import NavBar from "~/components/common/NavBar";
 import a4 from '../assets/images/Ellipse 3-4.png';
 
 
-
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -68,7 +67,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                     <span className="text-[#858585] font-medium text-base ml-3 hidden md:inline">Tharik Akbar</span>
                 </NavLink>
             </div></>
-            navBarContent = <div className="pt-40 flex  h-full flex-col items-center justify-between">
+            navBarContent = <> <div className="pt-40 flex  h-full flex-col items-center justify-between">
                 <div className="flex flex-col pl-6 space-y-4 w-full">
                     {[{ name: 'HOME', link: "#", active: false }, { name: 'EXPLORE', link: "/fans/explore", active: pathname.includes("explore") }, { name: 'ARTISTS', link: "/fans/artistprofile", active: pathname.includes("artistprofile") }, { name: 'SHOP MERCH', link: "#", active: false }, { name: 'MESSAGES', link: "#", active: false }].map((menu, i) => {
                         return <NavLink to={menu.link} key={menu.name} className={`font-medium text-base ${menu.active ? "text-[#FF3939]" : "text-[#858585]"}`}>{menu.name}</NavLink>
@@ -83,6 +82,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                     </NavLink>
                 </div>
             </div>
+            </>
             break;
         case pathname.includes("admin"):
             rightSideHeaderContent = <div className='flex items-center'>
