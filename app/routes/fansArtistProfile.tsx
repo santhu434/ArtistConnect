@@ -1,22 +1,26 @@
+import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import HomeFilledIcon from '@mui/icons-material/HomeFilled';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import MusicNoteIcon from '@mui/icons-material/MusicNote';
+import SearchIcon from '@mui/icons-material/Search';
+import StorefrontIcon from '@mui/icons-material/Storefront';
 import React from 'react';
 import a2 from '../assets/images/Ellipse 3-2.png';
 import e1 from '../assets/images/image-1.png';
 import e2 from '../assets/images/image-2.png';
 import e0 from '../assets/images/imageArt.png';
-
 const MusicCard = ({ title, img, time }: { title: string; img: string; time: string }) => (
-  <div className="max-w-[200px] w-full">
-    <img src={img} alt={title} className="w-48 h-36 object-cover" />
+  <div className="max-w-[200px] min-w-48 w-full">
+    <img src={img} alt={title} className="w-48 h-24 rounded md:h-36 object-cover" />
     <div className="p-2">
-      <p className="text-base font-semibold text-[#D8D8D8] truncate">{title}</p>
-      <p className="text-sm text-[#A2A2A2]">{time}</p>
+      <p className="text-sm md:text-base font-normal md:font-semibold text-[#D8D8D8] truncate">{title}</p>
+      <p className="text-xs md:text-sm text-[#A2A2A2]">{time}</p>
     </div>
   </div>
 );
 
 const ShopCard = ({ title, img, price }: { title: string; img: string; price: string }) => (
-  <div className="bg-[#2B2C31] rounded ">
+  <div className="bg-[#2B2C31] rounded min-w-40 ">
     <img src={img} alt={title} className="h-36 w-full object-cover" />
     <div className="p-3">
       <p className="text-base truncate font-semibold text-[#F3F4F6]">{title}</p>
@@ -42,19 +46,19 @@ const ArtistProfile: React.FC = () => {
       {/* Main Content */}
       <main className="flex-1 w-full">
         {/* Cover */}
-        <img src={e0} alt="cover" className="w-full h-52 object-cover" />
+        <img src={e0} alt="cover" className=" w-full h-20 md:h-52 object-fill  md:object-cover" />
 
         {/* Profile Header */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-4 -mt-18">
-          <img src={a2} alt="artist" className=" w-40 h-40 rounded-full" />
+        <div className="flex flex-row items-start gap-4 p-2 -mt-12 md:-mt-16">
+          <img src={a2} alt="artist" className="w-24 h-24 md:w-40 md:h-40 rounded-full" />
           <div>
             <h2 className="sm:text-4xl text-2xl font-bold">Bruno Mars</h2>
-            <p className='text-base font-medium text-[#D8D8D8] mt-5 opacity-50'>American singer-songwriter and musician</p>
-            <p className="text-base font-medium underline text-[#D8D8D8] opacity-50">bio.to/BrunoMars</p>
-            <button className="mt-2 px-4 py-2  rounded bg-gradient-to-r font-medium from-[#650077] to-[#AE008E] text-[#D9D9D9] text-sm">
+            <p className='text-xs md:text-base font-medium text-[#D8D8D8] mt-5 opacity-50'>American singer-songwriter and musician</p>
+            <p className="text-xs md:text-base font-medium underline text-[#D8D8D8] opacity-50">bio.to/BrunoMars</p>
+            <button className="mt-2 md:px-4 px-2 md:py-2 py-1  rounded bg-gradient-to-r font-medium from-[#650077] to-[#AE008E] text-[#D9D9D9] text-[10px] md:text-sm">
               Become a Fan
             </button>
-            <button className='ml-5'>
+            <button className='ml-2 md:ml-5'>
               <MoreHorizIcon />
             </button>
           </div>
@@ -65,7 +69,7 @@ const ArtistProfile: React.FC = () => {
           {['Overview', 'Feed', 'Shop', 'Community', 'Events'].map((tab, i) => (
             <button
               key={i}
-              className={`text-[#858585] cursor-pointer flex-1/5 px-4 py-2 text-base font-normal border-b-2 ${tab === "Overview" ? "border-[#FF3939] font-semibold text-[#FF3939]" : "border-transparent"} hover:border-[#FF3939]`}
+              className={`text-[#858585] cursor-pointer flex-1/5 px-2 md:px-4 py-2 text-[13px] md:text-base font-normal border-b-2 ${tab === "Overview" ? "border-[#FF3939] font-semibold text-[#FF3939]" : "border-transparent"} hover:border-[#FF3939]`}
             >
               {tab}
             </button>
@@ -76,8 +80,11 @@ const ArtistProfile: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-8 p-4">
           {/* Recent Releases */}
           <section className="flex-3/5">
-            <h3 className="text-lg text-[#D8D8D8] font-semibold mb-3">Recent Releases</h3>
-            <div className="grid grid-cols-3 gap-4">
+            <div className='flex justify-between items-center mb-3'>
+              <h3 className="text-base md:text-lg text-[#D8D8D8] font-semibold ">Recent Releases</h3>
+              <button className='md:hidden underline text-xs text-[#FF3939]'>View all</button>
+            </div>
+            <div className="flex overflow-auto md:grid md:grid-cols-3 gap-4">
               <MusicCard title="APT." img={e1} time="2:49" />
               <MusicCard title="Just the way you are" img={e2} time="3:40" />
               <MusicCard title="Locked out of Heaven" img={e0} time="3:53" />
@@ -87,7 +94,7 @@ const ArtistProfile: React.FC = () => {
           {/* Shop */}
           <section className="flex-2/5">
             <h3 className="text-lg text-[#D8D8D8] font-semibold mb-3">Shop</h3>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex  flex-nowrap overflow-auto gap-4">
               <ShopCard title="Vintage Denim Jacket" img={e2} price="350.00" />
               <ShopCard title="Cityscape Blazer" img={e1} price="350.00" />
             </div>
@@ -99,7 +106,7 @@ const ArtistProfile: React.FC = () => {
           {/* Top Hits */}
           <section className="md:col-span-2">
             <h2 className="text-lg text-[#D8D8D8] font-semibold mb-3">Top Hits</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2  gap-4">
               {topHits.map((item, index) => (
                 <div key={index} className="flex flex-row items-start space-x-2">
                   <img src={item.img} alt={item.title} className="w-20 h-16 rounded-xl" />
@@ -113,7 +120,7 @@ const ArtistProfile: React.FC = () => {
           </section>
 
           {/* Exclusive Contents */}
-          <section className='mb-5'>
+          <section className='mb-24'>
             <h2 className="text-lg text-[#D8D8D8] font-semibold mb-3">Exclusive Contents</h2>
             <div className="grid grid-cols-1 space-y-4">
               <img src={e0} alt={`Exclusive baner`} className="h-36 w-md object-cover rounded-xl" />
@@ -136,6 +143,28 @@ const ArtistProfile: React.FC = () => {
           </section>
         </div>
       </main>
+      <nav className='fixed md:hidden bottom-0 right-0 bg-[#292929] rounded-2xl grid grid-cols-5 left-0 m-2'>
+        <div className='flex flex-col items-center px-5 py-3'>
+          <HomeFilledIcon sx={{ color: "#AAAAAA" }} />
+          <div className='text-xs font-medium text-[#AAAAAA]'>HOME</div>
+        </div>
+        <div className='flex flex-col items-center px-5 py-3'>
+          <SearchIcon sx={{ color: "#AAAAAA" }} />
+          <div className='text-xs font-medium text-[#AAAAAA]'>EXPLORE</div>
+        </div>
+        <div className='flex flex-col items-center px-5 py-3'>
+          <MusicNoteIcon sx={{ color: "#FF3939" }} />
+          <div className='text-xs font-medium text-[#FF3939]'>ARTISTS</div>
+        </div>
+        <div className='flex flex-col items-center px-5 py-3'>
+          <StorefrontIcon sx={{ color: "#AAAAAA" }} />
+          <div className='text-xs font-medium text-[#AAAAAA]'>SHOP</div>
+        </div>
+        <div className='flex flex-col items-center px-5 py-3'>
+          <ChatBubbleOutlineIcon sx={{ color: "#AAAAAA" }} />
+          <div className='text-xs font-medium text-[#AAAAAA]'>MESSAGES</div>
+        </div>
+      </nav>
     </div>
   );
 };

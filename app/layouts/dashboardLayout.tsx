@@ -60,7 +60,14 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     console.log(pathname)
     switch (true) {
         case pathname.includes("fans"):
-            rightSideHeaderContent = <></>
+            rightSideHeaderContent = <><div className="block md:hidden">
+                <NavLink to="/fans/profile" className="flex items-center">
+                    {/* <Avatar sx={{ bgcolor: deepOrange[500] }}>TA</Avatar> */}
+                    <Avatar src={a4} sx={{}} />
+
+                    <span className="text-[#858585] font-medium text-base ml-3 hidden md:inline">Tharik Akbar</span>
+                </NavLink>
+            </div></>
             navBarContent = <div className="pt-40 flex  h-full flex-col items-center justify-between">
                 <div className="flex flex-col pl-6 space-y-4 w-full">
                     {[{ name: 'HOME', link: "#", active: false }, { name: 'EXPLORE', link: "/fans/explore", active: pathname.includes("explore") }, { name: 'ARTISTS', link: "/fans/artistprofile", active: pathname.includes("artistprofile") }, { name: 'SHOP MERCH', link: "#", active: false }, { name: 'MESSAGES', link: "#", active: false }].map((menu, i) => {
@@ -167,7 +174,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 <NavBar >
                     {navBarContent}
                 </NavBar>
-                <div className="mt-4 ml-2 overflow-y-auto hide-scrollbar max-h-min flex-10/12 w-xs pr-24">
+                <div className="mt-4 mx-2 overflow-y-auto hide-scrollbar max-h-min flex-10/12 w-xs md:pr-10">
                     <Outlet />
                 </div>
             </div>
