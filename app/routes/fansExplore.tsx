@@ -1,8 +1,4 @@
 import VideocamIcon from '@mui/icons-material/Videocam';
-import { Avatar } from "@mui/material";
-import { deepOrange } from "@mui/material/colors";
-import { NavLink } from "react-router";
-import logowhite from "../assets/icons/logowhite.svg";
 import a1 from "../assets/images/Ellipse 3-1.png";
 import a2 from "../assets/images/Ellipse 3-2.png";
 import a3 from "../assets/images/Ellipse 3-3.png";
@@ -21,21 +17,7 @@ const FansExplore = () => {
             {/* Main Content */}
             <div className="flex flex-col md:flex-row flex-1">
                 {/* Left Nav */}
-                <div className="bg-[#292929] md:rounded-2xl m-2 md:m-6 w-full md:w-3/12 lg:w-2/12 p-4 md:p-4 md:pt-40 flex flex-col justify-between">
-                    <div className="flex flex-col space-y-4">
-                        <NavLink to="#" className="text-[#858585] font-medium text-base">HOME</NavLink>
-                        <NavLink to="/fans/explore" className="text-[#FF3939] font-medium text-base">EXPLORE</NavLink>
-                        <NavLink to="/fans/artistprofile" className="text-[#858585] font-medium text-base">ARTISTS</NavLink>
-                        <NavLink to="#" className="text-[#858585] font-medium text-base">SHOP MERCH</NavLink>
-                        <NavLink to="#" className="text-[#858585] font-medium text-base">MESSAGES</NavLink>
-                    </div>
-                    <div className="mt-10 md:p-8">
-                        <NavLink to="/fans/profile" className="flex items-center">
-                            <Avatar sx={{ bgcolor: deepOrange[500] }}>TA</Avatar>
-                            <span className="text-[#858585] font-medium text-base ml-3 hidden md:inline">Tharik Akbar</span>
-                        </NavLink>
-                    </div>
-                </div>
+
 
                 {/* Right Content */}
                 <div className="flex-1 mt-4 md:ml-2 px-4 md:px-0">
@@ -47,14 +29,12 @@ const FansExplore = () => {
                             {[a1, a2, a3, a4].map((img, idx) => {
                                 const names = ["Taylor Swift", "The Weeknd", "BTS", "Bruno Mars"];
                                 return (
-                                    <div key={idx} className="text-center">
-                                        <div className="relative">
-                                            <img className="w-16 h-16 mx-auto border-[#AE008E] border-2 rounded-full" src={img} alt={`Artist ${idx}`} />
-                                            <div className="bg-[#FF3939] absolute -mt-5 -translate-x-[50%] top-[80%] left-[50%] text-[10.6px] font-normal flex px-1 rounded-full items-center">
-                                                <VideocamIcon fontSize='small' /> LIVE
-                                            </div>
-                                        </div>
-                                        <span className="text-[#D8D8D8] text-sm block mt-1">{names[idx]}</span>
+                                    <div className=' mx-1 text-center'>
+                                        <span className='relative text-center gap-2'>
+                                            <img className="w-16 h-16 mx-auto border-[#AE008E] border-2 rounded-full" src={img} alt="Artist 1" />
+                                            <div className='bg-[#FF3939] absolute -mt-5 -translate-x-[50%] top-[80%] left-[50%] text-[10.6px] font-normal w-min flex px-1 mx-auto rounded-full justify-center items-center'> <VideocamIcon fontSize='small' />LIVE</div>
+                                        </span>
+                                        <span className='text-[#D8D8D8] text-center relative w-full font-normal text-sm'>{names[idx]}</span>
                                     </div>
                                 );
                             })}
@@ -65,7 +45,7 @@ const FansExplore = () => {
                     <div className="mt-8">
                         <div className="flex justify-between items-center">
                             <h3 className="text-[#FF3939] font-bold text-xl">Popular Artists</h3>
-                            <span className="text-[#858585] text-base font-medium md:hidden">Show all</span>
+                            <span className="text-[#858585] text-base font-medium">Show all</span>
                         </div>
                         <div className="flex overflow-x-auto gap-4 py-4">
                             {[a0, a1, a2, a3, a4, a5, a6, a7].map((img, idx) => {
@@ -88,7 +68,7 @@ const FansExplore = () => {
                     <div className="mt-8">
                         <div className="flex justify-between items-center">
                             <h3 className="text-[#FF3939] font-bold text-xl">Upcoming Events</h3>
-                            <span className="text-[#858585] text-base font-medium md:hidden">Show all</span>
+                            <span className="text-[#858585] text-base font-medium ">Show all</span>
                         </div>
                         <div className="flex overflow-x-auto gap-4 py-4">
                             {[{ img: e0, title: "Neon Dreams Tour - ZYRA", venue: "Pulse Theatre, Singapore" },
