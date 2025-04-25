@@ -54,7 +54,7 @@ export const Content = (): JSX.Element => {
         (Last 28 Days)
       </p>
 
-      <div className="grid grid-cols-2 items-center gap-[15px] w-full hide-scrollbar overflow-x-scroll">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-[15px] w-full hide-scrollbar overflow-x-scroll">
         {audioItems.map((card, index) => (
           <ContentCard card={card} index={index} />
         ))}
@@ -65,7 +65,7 @@ export const Content = (): JSX.Element => {
         (Last 28 Days)
       </p>
 
-      <div className="grid grid-cols-2 items-center gap-[15px] w-full hide-scrollbar overflow-x-scroll">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-[15px] w-full hide-scrollbar overflow-x-scroll">
         {audioItems.map((card, index) => (
           <ContentCard card={card} index={index} />
         ))}
