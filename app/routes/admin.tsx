@@ -1,5 +1,8 @@
 import { alpha, styled } from "@mui/material";
 import InputBase from '@mui/material/InputBase';
+import { Artists } from "~/components/admin/Artists";
+import { Content } from "~/components/admin/Content";
+import { Fans } from "~/components/admin/Fans";
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -55,29 +58,21 @@ const Artist = () => {
         {/* left navigation */}
 
         {/* Right content */}
-        <div className="mt-4 ml-2  flex-10/12 w-xs">
+        <div className="mt-4 ml-2 ">
             {/* Live Now */}
             <div>
                 <h3 className="text-[#FF3939] font-bold text-3xl">Admin Analytics</h3>
                 <span className="text-white font-normal text-sm">Unified insights from Artist and Fan apps</span>
 
             </div>
-            <div className='flex mr-14 mt-4'>
-                <div>
-                    <div className='mr-8 flex-8/12'>
-                        <div className='flex justify-between items-center'>
-                            <h3 className="text-[#FF3939] font-bold text-xl">Artist</h3>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
+            <div className='mr-14 mt-4 w-full'>
+                <Artists />
+                <Fans />
+                <Content />
             </div>
 
 
-        </div>
+        </div >
     </>);
 }
 

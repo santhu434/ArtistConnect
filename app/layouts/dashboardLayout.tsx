@@ -160,7 +160,7 @@ export default function DashboardLayout({
               to={"#"}
               className={"text-[#858585] font-medium text-base mb-4"}
             >
-              Content Management
+              CONTENET Management
             </NavLink>
             <NavLink
               to={"#"}
