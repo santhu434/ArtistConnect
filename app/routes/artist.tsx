@@ -1,25 +1,24 @@
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
-import StarIcon from "@mui/icons-material/Star";
-import TuneIcon from "@mui/icons-material/Tune";
-import VisibilityIcon from "@mui/icons-material/Visibility";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import HomeFilledIcon from "@mui/icons-material/HomeFilled";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import SearchIcon from "@mui/icons-material/Search";
+import StarIcon from "@mui/icons-material/Star";
 import StorefrontIcon from "@mui/icons-material/Storefront";
+import TuneIcon from "@mui/icons-material/Tune";
+import VisibilityIcon from "@mui/icons-material/Visibility";
 import { Button } from "@mui/material";
+import { useState } from "react";
+import { useNavigate } from "react-router";
 import geographyImg from "../assets/images/geography.png";
+import e1 from "../assets/images/image-1.png";
+import e2 from "../assets/images/image-2.png";
 import sp1 from "../assets/images/songPic (1).png";
 import sp2 from "../assets/images/songPic (2).png";
 import sp3 from "../assets/images/songPic (3).png";
 import sp4 from "../assets/images/songPic (4).png";
-import a2 from "../assets/images/Ellipse 3-2.png";
-import e1 from "../assets/images/image-1.png";
-import e2 from "../assets/images/image-2.png";
 import audio from "../assets/music/one.mp3";
-import { useRef, useState, type SetStateAction } from "react";
-import { useNavigate } from "react-router";
 
 const MusicCard = ({
   title,
@@ -62,7 +61,7 @@ const Artist = () => {
     setCurrentAudio({ src: audioSrc, title, img });
   };
   const navigate = useNavigate();
-  const [playingIndex, setPlayingIndex] = useState(null);
+  const [playingIndex, setPlayingIndex] = useState<number | null>(null);
   const videos = [
     { img: sp1, videoUrl: "https://www.youtube.com/embed/TahZPOqCTXc?si=xSohDpVtD0_6vtS1" }, // Sample YouTube link (replace with your own)
     { img: e1, videoUrl: "https://www.youtube.com/embed/LjhCEhWiKXk?si=POB2xp6q_qCtS6Dd" },
@@ -70,7 +69,7 @@ const Artist = () => {
     { img: sp4, videoUrl: "https://www.youtube.com/embed/SR6iYWJxHqs?si=Q0kDb3onIsx3TdGD" },
   ];
 
-  const handlePlayVideo = (idx: number | SetStateAction<null>) => {
+  const handlePlayVideo = (idx: number | null) => {
     setPlayingIndex(idx);
   };
 
@@ -122,7 +121,7 @@ const Artist = () => {
                     {item.title}
                   </span>
                 </div>
-                <span className="text-white">...</span>
+                <span className="text-white">•••</span>
               </div>
               <div className="flex items-center mt-4">
                 <span className="text-white text-2xl font-semibold">

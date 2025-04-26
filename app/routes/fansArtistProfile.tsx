@@ -1,8 +1,9 @@
 
-import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';  
+import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import HomeFilledIcon from '@mui/icons-material/HomeFilled';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import SearchIcon from '@mui/icons-material/Search';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import React, { useState } from 'react';
@@ -12,7 +13,6 @@ import e1 from '../assets/images/image-1.png';
 import e2 from '../assets/images/image-2.png';
 import e0 from '../assets/images/imageArt.png';
 import audio from '../assets/music/one.mp3';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
 
 
@@ -197,14 +197,14 @@ const ArtistProfile: React.FC = () => {
 
       {/* Fixed Audio Player */}
       {currentAudio && (
-  <div className="fixed bottom-16 left-0 right-0 mx-auto bg-[#292929] text-white flex items-center space-x-3 px-4 py-2 rounded-2xl shadow-lg z-50 max-w-md md:max-w-fit">
-    <img src={currentAudio.img} alt={currentAudio.title} className="w-10 h-10 rounded-full object-cover" />
-    <div className="flex flex-col">
-      <span className="text-xs font-semibold">{currentAudio.title}</span>
-    </div>
-    <audio src={currentAudio.src} controls autoPlay className="w-full md:w-60" />
-  </div>
-)}
+        <div className="fixed bottom-16 left-0 right-0 mx-auto bg-[#292929] text-white flex items-center space-x-3 px-4 py-2 rounded-2xl shadow-lg z-50 max-w-md md:max-w-fit">
+          <img src={currentAudio.img} alt={currentAudio.title} className="w-10 h-10 rounded-full object-cover" />
+          <div className="flex flex-col">
+            <span className="text-xs font-semibold">{currentAudio.title}</span>
+          </div>
+          <audio src={currentAudio.src} controls autoPlay className="w-full md:w-60" />
+        </div>
+      )}
     </div>
   );
 };

@@ -1,5 +1,10 @@
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import EventNoteIcon from '@mui/icons-material/EventNote';
+import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import SearchIcon from "@mui/icons-material/Search";
+import TocIcon from '@mui/icons-material/Toc';
 import VideocamIcon from "@mui/icons-material/Videocam";
 import { alpha, Avatar, styled } from "@mui/material";
 import InputBase from "@mui/material/InputBase";
@@ -100,9 +105,8 @@ export default function DashboardLayout({
                   <NavLink
                     to={menu.link}
                     key={menu.name}
-                    className={`font-medium text-base ${
-                      menu.active ? "text-[#FF3939]" : "text-[#858585]"
-                    }`}
+                    className={`font-medium text-base ${menu.active ? "text-[#FF3939]" : "text-[#858585]"
+                      }`}
                   >
                     {menu.name}
                   </NavLink>
@@ -130,12 +134,12 @@ export default function DashboardLayout({
             <div className="p-8 flex items-center">
               <NotificationsIcon />
               <NavLink
-                to={"/fans/profile"}
+                to={"/admin"}
                 className={"flex ml-3 justify-center items-center"}
               >
                 <Avatar src={a4} sx={{}} />
                 {/* <Avatar sx={{ bgcolor: deepOrange[500] }}>TA</Avatar> */}
-                <div className="flex flex-col ml-2">
+                <div className="hidden sm:flex flex-col ml-2">
                   <span className="text-white font-medium text-base">
                     Tharik Akbar
                   </span>
@@ -146,6 +150,31 @@ export default function DashboardLayout({
               </NavLink>
             </div>
           </div>
+          <nav className="fixed md:hidden bottom-0 right-0 bg-[#292929] grid grid-cols-5 left-0">
+            <div className="flex flex-col items-center px-5 py-3">
+              <DashboardIcon sx={{ color: "#FF3939" }} />
+              <div className="text-xs font-medium text-[#FF3939]">DASHBOARD</div>
+            </div>
+            <div
+              // onClick={() => navigate("/fans/explore/")}
+              className="flex flex-col items-center px-5 py-3"
+            >
+              <TocIcon sx={{ color: "#AAAAAA" }} />
+              <div className="text-xs font-medium text-[#AAAAAA]">CONTENT</div>
+            </div>
+            <div className="flex flex-col items-center px-5 py-3">
+              <MusicNoteIcon sx={{ color: "#AAAAAA" }} />
+              <div className="text-xs font-medium text-[#AAAAAA]">ARTIST</div>
+            </div>
+            <div className="flex flex-col items-center px-5 py-3">
+              <PeopleAltIcon sx={{ color: "#AAAAAA" }} />
+              <div className="text-xs font-medium text-[#AAAAAA]">FANS</div>
+            </div>
+            <div className="flex flex-col items-center px-5 py-3">
+              <EventNoteIcon sx={{ color: "#AAAAAA" }} />
+              <div className="text-xs font-medium text-[#AAAAAA]">EVENT</div>
+            </div>
+          </nav>
         </div>
       );
       navBarContent = (
@@ -161,7 +190,7 @@ export default function DashboardLayout({
               to={"#"}
               className={"text-[#858585] font-medium text-base mb-4"}
             >
-              Content Management
+              CONTENET Management
             </NavLink>
             <NavLink
               to={"#"}
@@ -234,7 +263,7 @@ export default function DashboardLayout({
           <div className="flex items-center gap-3">
             <NotificationsIcon sx={{ color: "white" }} />
             <NavLink
-              to={"/fans/profile"}
+              to={"/artist"}
               className="flex items-center ml-2 gap-2"
             >
               <Avatar src={a4} />
