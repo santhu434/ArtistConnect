@@ -71,7 +71,6 @@ export default function DashboardLayout({
         <>
           <div className="block md:hidden">
             <NavLink to="/fans/profile" className="flex items-center">
-              {/* <Avatar sx={{ bgcolor: deepOrange[500] }}>TA</Avatar> */}
               <Avatar src={a4} sx={{}} />
 
               <span className="text-[#858585] font-medium text-base ml-3 hidden md:inline">
@@ -187,48 +186,48 @@ export default function DashboardLayout({
               DASHBOARD
             </NavLink>
             <NavLink
-              to={"#"}
+              to={"/admin/content-management"}
               className={"text-[#858585] font-medium text-base mb-4"}
             >
-              CONTENET Management
+              CONTENET MANAGEMENT
             </NavLink>
             <NavLink
-              to={"#"}
+              to={"/admin/artist-accounts"}
               className={"text-[#858585] font-medium text-base mb-4"}
             >
               ARTIST ACCOUNTS
             </NavLink>
             <NavLink
-              to={"#"}
+              to={"/admin/follower-accounts"}
               className={"text-[#858585] font-medium text-base mb-4"}
             >
               FANS ACCOUNTS
             </NavLink>
             <NavLink
-              to={"#"}
+              to={"/admin/event-management"}
               className={"text-[#858585] font-medium text-base mb-4"}
             >
-              EVENT Management
+              EVENT MANAGEMENT
+            </NavLink>
+            <NavLink
+              to={"/admin/revenue-management"}
+              className={"text-[#858585] font-medium text-base mb-4"}
+            >
+              REVENUE MANAGEMENT
             </NavLink>
           </div>
           <div className="  flex flex-col pt-40 pl-5">
             <NavLink
-              to={"#"}
-              className={"text-[#858585] font-medium text-base mb-4"}
-            >
-              USERS
-            </NavLink>
-            <NavLink
-              to={"#"}
+              to={"/admin/support-tickets"}
               className={"text-[#858585] font-medium text-base mb-4"}
             >
               SUPPORT TICKETS
             </NavLink>
             <NavLink
-              to={"#"}
+              to={"/admin/activity-log"}
               className={"text-[#858585] font-medium text-base mb-4"}
             >
-              Activity Logs
+              ACTIVITY LOGS
             </NavLink>
           </div>
         </>
