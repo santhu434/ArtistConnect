@@ -63,6 +63,7 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   const { pathname } = useLocation();
+
   let rightSideHeaderContent, navBarContent;
   console.log(pathname);
   switch (true) {
@@ -176,62 +177,36 @@ export default function DashboardLayout({
           </nav>
         </div>
       );
+      const navBarContentList = [
+        { title: "DASHBOARD", to: "/admin" },
+        { title: "CONTENET MANAGEMENT", to: "/admin/content-management" },
+        { title: "ARTIST ACCOUNTS", to: "/admin/artist-accounts" },
+        { title: "FANS ACCOUNTS", to: "/admin/follower-accounts" },
+        { title: "EVENT MANAGEMENT", to: "/admin/event-management" },
+        { title: "REVENUE MANAGEMENT", to: "/admin/revenue-management" },
+        { title: "SUPPORT TICKETS", to: "/admin/support-tickets" },
+        { title: "ACTIVITY LOGS", to: "/admin/activity-log" }
+      ]
       navBarContent = (
-        <>
-          <div className="  flex flex-col pt-10 pl-5">
-            <NavLink
-              to={"#"}
-              className={"text-[#FF3939] font-medium text-base mb-4"}
+        <div className='flex flex-col justify-between h-full overflow-y-auto sleek-scrollbar'>
+          <div className="  flex-col flex px-5">
+            {navBarContentList.slice(0, -2).map(({ title, to }) => <NavLink
+              to={to}
+              className={`${to === pathname ? "text-[#FF3939]" : "text-[#858585]"} font-medium text-base mb-4`}
             >
-              DASHBOARD
-            </NavLink>
-            <NavLink
-              to={"/admin/content-management"}
-              className={"text-[#858585] font-medium text-base mb-4"}
-            >
-              CONTENET MANAGEMENT
-            </NavLink>
-            <NavLink
-              to={"/admin/artist-accounts"}
-              className={"text-[#858585] font-medium text-base mb-4"}
-            >
-              ARTIST ACCOUNTS
-            </NavLink>
-            <NavLink
-              to={"/admin/follower-accounts"}
-              className={"text-[#858585] font-medium text-base mb-4"}
-            >
-              FANS ACCOUNTS
-            </NavLink>
-            <NavLink
-              to={"/admin/event-management"}
-              className={"text-[#858585] font-medium text-base mb-4"}
-            >
-              EVENT MANAGEMENT
-            </NavLink>
-            <NavLink
-              to={"/admin/revenue-management"}
-              className={"text-[#858585] font-medium text-base mb-4"}
-            >
-              REVENUE MANAGEMENT
-            </NavLink>
+              {title}
+            </NavLink>)}
           </div>
-          <div className="  flex flex-col pt-40 pl-5">
-            <NavLink
-              to={"/admin/support-tickets"}
-              className={"text-[#858585] font-medium text-base mb-4"}
+          <div className="  flex flex-col px-5">
+            {navBarContentList.slice(-2).map(({ title, to }) => <NavLink
+              to={to}
+              className={`${to === pathname ? "text-[#FF3939]" : "text-[#858585]"} font-medium text-base mb-4`}
             >
-              SUPPORT TICKETS
-            </NavLink>
-            <NavLink
-              to={"/admin/activity-log"}
-              className={"text-[#858585] font-medium text-base mb-4"}
-            >
-              ACTIVITY LOGS
-            </NavLink>
+              {title}
+            </NavLink>)}
           </div>
-        </>
-      );
+        </div>
+      )
       break;
     case pathname.includes("artist"):
       rightSideHeaderContent = (
