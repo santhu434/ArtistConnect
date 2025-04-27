@@ -87,7 +87,7 @@ export default function DashboardLayout({
           <div className="pt-40 flex  h-full flex-col items-center justify-between">
             <div className="flex flex-col pl-6 space-y-4 w-full">
               {[
-                { name: "HOME", link: "/fans/home", active: pathname.includes("home")},
+                { name: "HOME", link: "/fans/home", active: pathname.includes("home") },
                 {
                   name: "EXPLORE",
                   link: "/fans/explore",
@@ -98,7 +98,7 @@ export default function DashboardLayout({
                   link: "/fans/artistprofile",
                   active: pathname.includes("artistprofile"),
                 },
-                { name: "SHOP MERCH", link: "#", active: false }
+                { name: "SHOP MERCH", link: "/fans/shop_merch", active: pathname.includes("shop_merch") }
               ].map((menu, i) => {
                 return (
                   <NavLink
@@ -126,7 +126,7 @@ export default function DashboardLayout({
         </>
       );
       break;
-    case pathname.includes("admin"):
+    case pathname.includes("admin"): {
       rightSideHeaderContent = (
         <div className="flex items-center">
           <div>
@@ -207,7 +207,8 @@ export default function DashboardLayout({
         </div>
       )
       break;
-    case pathname.includes("artist"):
+    }
+    case pathname.includes("artist"): {
       rightSideHeaderContent = (
         <div className="flex items-center gap-4">
           {/* Search Bar */}
@@ -252,13 +253,18 @@ export default function DashboardLayout({
           </div>
         </div>
       );
-
+      const navBarContentList = [
+        { title: "FEED", to: "/artist/feeds" },
+        { title: "CONTENT", to: "/artist/contents" },
+        { title: "EVENTS", to: "/artist/events" },
+        { title: "MY STUDIO ANALYTICS", to: "/artist" }
+      ]
       navBarContent = (
         <>
           {/* Nav Links */}
           <div className="flex flex-col pt-24 sm:pt-32 pl-3 sm:pl-5">
             {/* GO LIVE NOW Button inside nav */}
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center mb-8 cursor-pointer ">
               <div className="bg-[#FF3939] text-white text-sm sm:text-lg font-normal flex p-2 sm:px-4 sm:py-2 rounded-full justify-center items-center">
                 <VideocamIcon fontSize="small" className="mr-1" />
                 GO LIVE NOW
@@ -266,35 +272,17 @@ export default function DashboardLayout({
             </div>
 
             {/* Other nav links */}
-            <NavLink
-              to={"/artist/feeds"}
-              className="text-[#858585] font-medium text-sm sm:text-base mb-3 sm:mb-4"
+            {navBarContentList.map(({ title, to }) => <NavLink
+              to={to}
+              className={`${to === pathname ? "text-[#FF3939]" : "text-[#858585]"} font-medium text-sm sm:text-base mb-3 sm:mb-4`}
             >
-              FEED
-            </NavLink>
-            <NavLink
-              to={"/artist/contents"}
-              className="text-[#858585] font-medium text-sm sm:text-base mb-3 sm:mb-4"
-            >
-              CONTENT
-            </NavLink>
-            <NavLink
-              to={"/artist/events"}
-              className="text-[#858585] font-medium text-sm sm:text-base mb-3 sm:mb-4"
-            >
-              EVENTS
-            </NavLink>
-            <NavLink
-              to={"/artist"}
-              className="text-[#FF3939] font-medium text-sm sm:text-base mb-3 sm:mb-4"
-            >
-              MY STUDIO ANALYTICS
-            </NavLink>
+              {title}
+            </NavLink>)}
           </div>
         </>
       );
       break;
-
+    }
     default:
       rightSideHeaderContent = <></>;
       navBarContent = <></>;
