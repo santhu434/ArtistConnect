@@ -16,6 +16,7 @@ export default [
         route("/artist", "./routes/artist.tsx"),
         route("/artist/feeds", "./routes/artist/Feeds.tsx"),
         route("/artist/contents", "./routes/artist/Content.tsx"),
+        route("/artist/events", "./routes/artist/Events.tsx"),
         route("/admin", "./routes/admin.tsx"),
         route("/admin/content-management", "./components/admin/Content_Management.tsx"),
         route("/admin/artist-accounts", "./components/admin/Artist_Accounts.tsx"),

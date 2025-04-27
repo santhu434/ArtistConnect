@@ -293,25 +293,25 @@ export default function DashboardLayout({
 
             {/* Other nav links */}
             <NavLink
-              to={"#"}
+              to={"/artist/feeds"}
               className="text-[#858585] font-medium text-sm sm:text-base mb-3 sm:mb-4"
             >
               FEED
             </NavLink>
             <NavLink
-              to={"#"}
+              to={"/artist/contents"}
               className="text-[#858585] font-medium text-sm sm:text-base mb-3 sm:mb-4"
             >
               CONTENT
             </NavLink>
             <NavLink
-              to={"#"}
+              to={"/artist/events"}
               className="text-[#858585] font-medium text-sm sm:text-base mb-3 sm:mb-4"
             >
               EVENTS
             </NavLink>
             <NavLink
-              to={"/fans/explore"}
+              to={"/artist"}
               className="text-[#FF3939] font-medium text-sm sm:text-base mb-3 sm:mb-4"
             >
               MY STUDIO ANALYTICS
