@@ -197,7 +197,7 @@ const ArtistProfile: React.FC = () => {
 
       {/* Fixed Audio Player */}
       {currentAudio && (
-        <div className="fixed bottom-16 left-0 right-0 mx-auto bg-[#292929] text-white flex items-center space-x-3 px-4 py-2 rounded-2xl shadow-lg z-50 max-w-md md:max-w-fit">
+        <div className="fixed bottom-16 left-0 right-0 mx-auto bg-gradient-to-r from-[#650077] to-[#AE008E] text-white flex items-center space-x-3 px-4 py-2 rounded-2xl shadow-lg z-50 max-w-md md:max-w-fit">
           <img src={currentAudio.img} alt={currentAudio.title} className="w-10 h-10 rounded-full object-cover" />
           <div className="flex flex-col">
             <span className="text-xs font-semibold">{currentAudio.title}</span>

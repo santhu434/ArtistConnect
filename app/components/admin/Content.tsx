@@ -50,9 +50,6 @@ export const Content = (): JSX.Element => {
       </h2>
 
       <h3 className="font-semibold font-['Inter',Helvetica] text-base text-white">Top Performing Audio</h3>
-      <p className="text-white text-[11px] font-normal">
-        (Last 28 Days)
-      </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-[15px] w-full hide-scrollbar overflow-x-scroll">
         {audioItems.map((card, index) => (
@@ -61,9 +58,6 @@ export const Content = (): JSX.Element => {
       </div>
 
       <h3 className="font-semibold font-['Inter',Helvetica] text-base text-white">Top Performing Video</h3>
-      <p className="text-white text-[11px] font-normal">
-        (Last 28 Days)
-      </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-[15px] w-full hide-scrollbar overflow-x-scroll">
         {audioItems.map((card, index) => (

@@ -153,9 +153,6 @@ const Artist = () => {
               <h3 className="text-white font-semibold text-base">
                 Top Performing Audio
               </h3>
-              <div className="text-white text-[11px] font-normal my-2">
-                (Last 28 Days)
-              </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[sp1, sp4, sp2, sp3].map((img, idx) => (
                   <div key={idx} className="flex gap-3 items-start p-2">
@@ -193,9 +190,6 @@ const Artist = () => {
               <h3 className="text-white font-semibold text-base">
                 Top Performing Video
               </h3>
-              <div className="text-white text-[11px] font-normal my-2">
-                (Last 28 Days)
-              </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {videos.map((item, idx) => (
                   <div key={idx} className="flex gap-3 items-start p-2">
@@ -258,13 +252,12 @@ const Artist = () => {
             <h3 className="text-white font-semibold text-base mt-3">
               Total Earnings Breakdown
             </h3>
-            <div className="text-white text-[11px] font-normal my-2">
-              (Last 28 Days)
-            </div>
+            <div className="flex flex-col gap-2">In This Year</div>
             <div className="flex flex-col gap-2">
               {[
                 { title: "Subscriptions", amount: "RM 2,500" },
                 { title: "Event Tickets", amount: "RM 1,200" },
+                { title: "Total", amount: "RM 3,700" },
                 // Add more if needed
               ].map((item, idx) => (
                 <div key={idx} className="flex justify-between items-center">
@@ -311,7 +304,7 @@ const Artist = () => {
           </div>
         </nav>
         {currentAudio && (
-          <div className="fixed bottom-16 left-0 right-0 mx-auto bg-[#292929] text-white flex items-center space-x-3 px-4 py-2 rounded-2xl shadow-lg z-50 max-w-md md:max-w-fit">
+          <div className="fixed bottom-16 left-0 right-0 mx-auto bg-gradient-to-r from-[#650077] to-[#AE008E] text-white flex items-center space-x-3 px-4 py-2 rounded-2xl shadow-lg z-50 max-w-md md:max-w-fit">
             <img
               src={currentAudio.img}
               alt={currentAudio.title}

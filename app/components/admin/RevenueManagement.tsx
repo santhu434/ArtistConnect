@@ -44,7 +44,7 @@ const RevenueManagement = () => {
     <div className="p-4 md:p-8 bg-[#181A20] min-h-screen space-y-8">
       {/* Page Title */}
       <div className="flex flex-col md:flex-row md:items-center justify-between">
-        <Typography variant="h4" className="font-bold mb-4 md:mb-0">
+        <Typography variant="h5" className="font-bold mb-4 md:mb-0">
           Revenue Management
         </Typography>
         <Button variant="contained" startIcon={<DownloadIcon />} className="bg-gradient-to-r from-purple-700 to-pink-500 text-white">

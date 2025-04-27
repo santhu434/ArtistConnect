@@ -101,7 +101,7 @@ export default function FanAccounts() {
   return (
     <div className="bg-[#181A20] p-4 md:p-8">
       <h1 className="text-2xl md:text-2xl font-bold text-white mb-6 text-left">
-        FANS ACCOUNTS MANAGEMENT
+        Fans Accounts Management
       </h1>
 
       <div className="overflow-x-auto">

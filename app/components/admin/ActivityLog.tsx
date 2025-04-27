@@ -154,7 +154,7 @@ export default function ActivityLogList() {
 
   return (
     <div className="min-h-screen bg-[#181A20] p-4 md:p-8">
-      <h1 className="text-2xl md:text-4xl font-bold mb-6 text-left">
+      <h1 className="text-2xl md:text-2xl font-bold mb-6 text-left">
         Activity Log
       </h1>
 

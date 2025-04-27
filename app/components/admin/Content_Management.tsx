@@ -99,7 +99,7 @@ export default function ContentManagement() {
 
   return (
     <div className="bg-[#1B1C21] p-4 md:p-8">
-      <h1 className="text-4xl font-bold mb-8 text-center">
+      <h1 className="text-2xl font-bold mb-8 text-left">
         Content Management
       </h1>
 
@@ -107,7 +107,7 @@ export default function ContentManagement() {
         {contentSections.map((section, index) => (
           <div
             key={index}
-            className="bg-[#292929] rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden flex flex-col"
+            className="bg-[#292929] rounded-2xl shadow-md hover:bg-[#3A3A3A] duration-300 shadow-xl transition duration-300 overflow-hidden flex flex-col"
           >
             <img
               src={section.image}
@@ -130,7 +130,7 @@ export default function ContentManagement() {
                     {section.status}
                   </span>
                 </div>
-                <p className="text-sm text-gray-600 mb-4">{section.description}</p>
+                <p className="text-sm text-white mb-4">{section.description}</p>
 
                 <div className="grid grid-cols-3 gap-2 text-center mb-4">
                   <div>
