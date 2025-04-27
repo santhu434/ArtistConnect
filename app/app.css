@@ -26,3 +26,28 @@
     display: none;
     /* Chrome, Safari, Opera */
 }
+
+.sleek-scrollbar {
+    scrollbar-width: thin;
+    /* Firefox */
+    scrollbar-color: rgba(100, 100, 100, 0.5) transparent;
+    /* Firefox */
+
+    /* For WebKit browsers */
+}
+
+.sleek-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.sleek-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sleek-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(100, 100, 100, 0.5);
+    border-radius: 4px;
+    border: 1px solid transparent;
+    /* optional, for smooth edge */
+}
