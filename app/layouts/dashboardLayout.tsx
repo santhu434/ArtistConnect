@@ -87,7 +87,7 @@ export default function DashboardLayout({
           <div className="pt-40 flex  h-full flex-col items-center justify-between">
             <div className="flex flex-col pl-6 space-y-4 w-full">
               {[
-                { name: "HOME", link: "#", active: false },
+                { name: "HOME", link: "/fans/home", active: pathname.includes("home")},
                 {
                   name: "EXPLORE",
                   link: "/fans/explore",
@@ -98,8 +98,7 @@ export default function DashboardLayout({
                   link: "/fans/artistprofile",
                   active: pathname.includes("artistprofile"),
                 },
-                { name: "SHOP MERCH", link: "#", active: false },
-                { name: "MESSAGES", link: "#", active: false },
+                { name: "SHOP MERCH", link: "#", active: false }
               ].map((menu, i) => {
                 return (
                   <NavLink

@@ -12,6 +12,8 @@ export default [
             route("/explore", "routes/fansExplore.tsx"),
             route("/profile", "routes/fansProfile.tsx"),
             route("/artistprofile", "routes/fansArtistProfile.tsx"),
+            route("/home", "routes/fans/Home.tsx"),
+            route("/shop_merch", "routes/fans/ShopMerch.tsx"),
         ]),
         route("/artist", "./routes/artist.tsx"),
         route("/artist/feeds", "./routes/artist/Feeds.tsx"),
