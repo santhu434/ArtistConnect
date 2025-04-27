@@ -113,7 +113,7 @@ const ArtistProfile: React.FC = () => {
               <h3 className="text-base md:text-lg text-[#D8D8D8] font-semibold">Recent Releases</h3>
               <button className="md:hidden underline text-xs text-[#FF3939]">View all</button>
             </div>
-            <div className="flex overflow-auto md:grid md:grid-cols-3 gap-4">
+            <div className="flex overflow-auto md:grid md:grid-cols-3 gap-4 sleek-scrollbar">
               <MusicCard title="APT." img={e1} time="2:49" audio={audio} onPlay={handlePlay} />
               <MusicCard title="Just the Way You Are" img={e2} time="3:40" audio={audio} onPlay={handlePlay} />
               <MusicCard title="Locked Out of Heaven" img={e0} time="3:53" audio={audio} onPlay={handlePlay} />
