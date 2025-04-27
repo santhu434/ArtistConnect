@@ -1,8 +1,3 @@
-import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
-import HomeFilledIcon from '@mui/icons-material/HomeFilled';
-import MusicNoteIcon from '@mui/icons-material/MusicNote';
-import SearchIcon from '@mui/icons-material/Search';
-import StorefrontIcon from '@mui/icons-material/Storefront';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import { useNavigate } from 'react-router';
 import a1 from "../assets/images/Ellipse 3-1.png";
@@ -99,28 +94,7 @@ const FansExplore = () => {
                     </div>
                 </div>
             </div>
-            <nav className='fixed md:hidden bottom-0 right-0 bg-[#292929] rounded-2xl grid grid-cols-5 left-0 m-2'>
-                <div className='flex flex-col items-center px-5 py-3'>
-                    <HomeFilledIcon sx={{ color: "#AAAAAA" }} />
-                    <div className='text-xs font-medium text-[#AAAAAA]'>HOME</div>
-                </div>
-                <div className='flex flex-col items-center px-5 py-3'>
-                    <SearchIcon sx={{ color: "#FF3939" }} />
-                    <div className='text-xs font-medium text-[#FF3939]'>EXPLORE</div>
-                </div>
-                <div onClick={() => navigate("/fans/artistprofile/")} className='flex flex-col items-center px-5 py-3'>
-                    <MusicNoteIcon sx={{ color: "#AAAAAA" }} />
-                    <div className='text-xs font-medium text-[#AAAAAA]'>ARTISTS</div>
-                </div>
-                <div className='flex flex-col items-center px-5 py-3'>
-                    <StorefrontIcon sx={{ color: "#AAAAAA" }} />
-                    <div className='text-xs font-medium text-[#AAAAAA]'>SHOP</div>
-                </div>
-                <div className='flex flex-col items-center px-5 py-3'>
-                    <ChatBubbleOutlineIcon sx={{ color: "#AAAAAA" }} />
-                    <div className='text-xs font-medium text-[#AAAAAA]'>MESSAGES</div>
-                </div>
-            </nav>
+
         </>
     );
 }
