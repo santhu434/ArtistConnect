@@ -8,7 +8,7 @@ import Login from "./Login";
 import SignUp from "./SignUp";
 
 const LoginHome = () => {
-    const [selectedComponent, setSelectedComponent] = useState<"signup" | "login">("signup")
+    const [selectedComponent, setSelectedComponent] = useState<"signup" | "login">("login")
     return (<div className="min-h-screen flex flex-col md:flex-row bg-[#1B1C21] text-white">
         {/* Left Panel */}
         <div className="md:w-1/2 flex flex-col justify-center items-center text-center px-8 py-10">

@@ -29,7 +29,7 @@ const Login = () => {
 
   return (<div>
     <h2 className="text-base font-normal text-[#A2A2A2] mb-2">LET'S GET YOU STARTED</h2>
-    <h1 className="text-2xl font-bold mb-6">Log In as Fan</h1>
+    <h1 className="text-2xl font-bold mb-6">Log In</h1>
     <form>
       <CustomTextField label="Email" onChange={(e) => setEmail(e.target.value)} />
       <CustomTextField label="Password" type="password" />
