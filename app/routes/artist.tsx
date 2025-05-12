@@ -1,11 +1,6 @@
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
-import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
-import HomeFilledIcon from "@mui/icons-material/HomeFilled";
-import MusicNoteIcon from "@mui/icons-material/MusicNote";
-import SearchIcon from "@mui/icons-material/Search";
 import StarIcon from "@mui/icons-material/Star";
-import StorefrontIcon from "@mui/icons-material/Storefront";
 import TuneIcon from "@mui/icons-material/Tune";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import { Button } from "@mui/material";
@@ -277,32 +272,6 @@ const Artist = () => {
             />
           </div>
         </div>
-
-        <nav className="fixed md:hidden bottom-0 right-0 bg-[#292929] grid grid-cols-5 left-0">
-          <div className="flex flex-col items-center px-5 py-3">
-            <HomeFilledIcon sx={{ color: "#AAAAAA" }} />
-            <div className="text-xs font-medium text-[#AAAAAA]">HOME</div>
-          </div>
-          <div
-            onClick={() => navigate("/fans/explore/")}
-            className="flex flex-col items-center px-5 py-3"
-          >
-            <SearchIcon sx={{ color: "#AAAAAA" }} />
-            <div className="text-xs font-medium text-[#AAAAAA]">EXPLORE</div>
-          </div>
-          <div className="flex flex-col items-center px-5 py-3">
-            <MusicNoteIcon sx={{ color: "#FF3939" }} />
-            <div className="text-xs font-medium text-[#FF3939]">ARTISTS</div>
-          </div>
-          <div className="flex flex-col items-center px-5 py-3">
-            <StorefrontIcon sx={{ color: "#AAAAAA" }} />
-            <div className="text-xs font-medium text-[#AAAAAA]">SHOP</div>
-          </div>
-          <div className="flex flex-col items-center px-5 py-3">
-            <ChatBubbleOutlineIcon sx={{ color: "#AAAAAA" }} />
-            <div className="text-xs font-medium text-[#AAAAAA]">MESSAGES</div>
-          </div>
-        </nav>
         {currentAudio && (
           <div className="fixed bottom-16 left-0 right-0 mx-auto bg-gradient-to-r from-[#650077] to-[#AE008E] text-white flex items-center space-x-3 px-4 py-2 rounded-2xl shadow-lg z-50 max-w-md md:max-w-fit">
             <img
