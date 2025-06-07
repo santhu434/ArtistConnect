@@ -72,6 +72,20 @@ const Artist = () => {
   const handlePlayVideo = (idx: number | null) => {
     setPlayingIndex(idx);
   };
+  const subscriptions = 2500;
+  const eventTickets = 1200;
+  const tipsAndJar = 350;
+  const oneOfSubscription = 500;
+
+  const total = subscriptions + eventTickets + tipsAndJar + oneOfSubscription;
+
+  const items = [
+    { title: "Subscriptions", amount: subscriptions },
+    { title: "Event Tickets", amount: eventTickets },
+    { title: "Tips and Jar", amount: tipsAndJar },
+    { title: "One of Subscription", amount: oneOfSubscription },
+    { title: "Total", amount: total },
+  ];
 
   return (
     <>
@@ -252,20 +266,12 @@ const Artist = () => {
             <h3 className="text-white font-semibold text-base mt-3">
               Total Earnings Breakdown
             </h3>
-            <div className="flex flex-col gap-2">In This Year</div>
             <div className="flex flex-col gap-2">
-              {[
-                { title: "Subscriptions", amount: "RM 2,500" },
-                { title: "Event Tickets", amount: "RM 1,200" },
-                { title: "Total", amount: "RM 3,700" },
-                // Add more if needed
-              ].map((item, idx) => (
+              {items.map((item, idx) => (
                 <div key={idx} className="flex justify-between items-center">
-                  <span className="text-white text-xs font-normal">
-                    {item.title}
-                  </span>
+                  <span className="text-white text-xs font-normal">{item.title}</span>
                   <span className="text-white text-xs font-semibold">
-                    {item.amount}
+                    RM {item.amount.toLocaleString()}
                   </span>
                 </div>
               ))}
