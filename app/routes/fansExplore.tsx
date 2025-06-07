@@ -31,25 +31,6 @@ const FansExplore = () => {
 
                     {/* Right Content */}
                     <div className="flex-1 mt-4 md:ml-2 px-4 md:px-0">
-                        {/* Live Now */}
-                        <div>
-                            <h3 className="text-[#FF3939] font-bold text-xl">Live Now</h3>
-                            <p className="text-white font-normal text-lg">Real-time live broadcasts happening</p>
-                            <div className="my-3 flex flex-nowrap overflow-auto gap-3">
-                                {[a1, a2, a3, a4].map((img, idx) => {
-                                    const names = ["Taylor Swift", "The Weeknd", "BTS", "Bruno Mars"];
-                                    return (
-                                        <div className='min-w-20 mx-1 text-center'>
-                                            <span className='relative text-center gap-2'>
-                                                <img className="w-16 h-16 mx-auto border-[#AE008E] border-2 rounded-full" src={img} alt="Artist 1" />
-                                                <div className='bg-[#FF3939] absolute -mt-5 -translate-x-[50%] top-[80%] left-[50%] text-[10.6px] font-normal w-min flex px-1 mx-auto rounded-full justify-center items-center'> <VideocamIcon fontSize='small' />LIVE</div>
-                                            </span>
-                                            <span className='text-[#D8D8D8] text-center relative w-full font-normal text-sm'>{names[idx]}</span>
-                                        </div>
-                                    );
-                                })}
-                            </div>
-                        </div>
 
                         {/* Popular Artists */}
                         <div className="mt-8">

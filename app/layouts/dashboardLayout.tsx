@@ -98,6 +98,7 @@ export default function DashboardLayout({
                   link: "/fans/artistprofile",
                   active: pathname.includes("artistprofile"),
                 },
+                { name: 'FEEDS', link: "/fans/feeds", active: pathname.includes("feeds") },
                 { name: "SHOP MERCH", link: "/fans/shop_merch", active: pathname.includes("shop_merch") }
               ].map((menu, i) => {
                 return (
@@ -178,7 +179,7 @@ export default function DashboardLayout({
       );
       const navBarContentList = [
         { title: "DASHBOARD", to: "/admin" },
-        { title: "CONTENET MANAGEMENT", to: "/admin/content-management" },
+        { title: "CONTENT MANAGEMENT", to: "/admin/content-management" },
         { title: "ARTIST ACCOUNTS", to: "/admin/artist-accounts" },
         { title: "FANS ACCOUNTS", to: "/admin/follower-accounts" },
         { title: "EVENT MANAGEMENT", to: "/admin/event-management" },

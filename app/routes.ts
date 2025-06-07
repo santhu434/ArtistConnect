@@ -14,9 +14,9 @@ export default [
             route("/artistprofile", "routes/fansArtistProfile.tsx"),
             route("/home", "routes/fans/Home.tsx"),
             route("/shop_merch", "routes/fans/ShopMerch.tsx"),
+            route("/feeds", "routes/fans/Feeds.tsx")
         ]),
         route("/artist", "./routes/artist.tsx"),
-        route("/artist/feeds", "./routes/artist/Feeds.tsx"),
         route("/artist/contents", "./routes/artist/Content.tsx"),
         route("/artist/events", "./routes/artist/Events.tsx"),
         route("/admin", "./routes/admin.tsx"),
