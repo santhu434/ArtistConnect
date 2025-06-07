@@ -1,18 +1,28 @@
-'use client';
+
 
 import { useState } from 'react';
-import { Card, CardContent, CardHeader, Typography, Button, Chip } from '@mui/material';
+import { Card, CardContent, CardHeader, Typography, Button, Chip, Divider, LinearProgress } from '@mui/material';
 import { BarChart } from '@mui/x-charts/BarChart';
 import { PieChart } from '@mui/x-charts/PieChart';
 import DownloadIcon from '@mui/icons-material/Download';
+import PaidIcon from "@mui/icons-material/Paid";
+import HourglassBottomIcon from "@mui/icons-material/HourglassBottom";
 
-const revenueData = [12000, 15000, 18000, 14000, 17000];
-const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May'];
+const revenueData = [
+  { label: "Paper View", amount: 12000 },
+  { label: "Tips & Jar", amount: 8500 },
+  { label: "Subscriptions", amount: 20000 },
+  { label: "Merchandize", amount: 15000 },
+  { label: "Events", amount: 18500 },
+];
+
+
+
+
 
 const subscriptionData = [
-  { label: 'Basic', value: 40 },
   { label: 'Premium', value: 35 },
-  { label: 'VIP', value: 25 },
+  { label: 'Gold', value: 25 },
 ];
 
 const paymentHistory = [
@@ -37,8 +47,12 @@ const taxesAndDeductions = {
   otherDeductions: 5,
 };
 
+
+const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"];
+const monthlyRevenue = [2000, 15000, 14000, 18000, 22000, 20000, 24000];
+
 const RevenueManagement = () => {
-  const [showFullHistory, setShowFullHistory] = useState(false);
+
 
   return (
     <div className="p-4 md:p-8 bg-[#181A20] min-h-screen space-y-8">
@@ -53,31 +67,39 @@ const RevenueManagement = () => {
       </div>
 
       {/* Revenue Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Card className="shadow-md">
-          <CardHeader title="Total Revenue" />
-          <CardContent>
-            <Typography variant="h5" className="font-bold">RM74,000</Typography>
-            <Typography color="text.secondary">Last 5 months</Typography>
-          </CardContent>
-        </Card>
+      <div className="max-w-4xl mx-auto p-6 space-y-8 bg-white rounded-xl shadow-lg">
+        {/* Revenue Breakdown */}
+        <section>
+          <h2 className="text-xl font-bold mb-6 text-gray-800">Total Revenue</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {revenueData.map(({ label, amount }) => (
+              <div
+                key={label}
+                className="border rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow cursor-default"
+              >
+                <p className="text-gray-600 font-semibold">{label}</p>
+                <p className="text-2xl font-bold text-gray-900 mt-2">RM{amount.toLocaleString()}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-        <Card className="shadow-md">
-          <CardHeader title="Total Payouts" />
-          <CardContent>
-            <Typography variant="h5" className="font-bold">RM15,000</Typography>
-            <Typography color="text.secondary">To Artists</Typography>
-          </CardContent>
-        </Card>
+        <div className="flex flex-col sm:flex-row sm:space-x-8 gap-6">
+          {/* Total Payouts Card */}
+          <div className="flex-1 bg-gradient-to-r from-green-400 to-green-600 text-white rounded-lg shadow-md p-6 flex flex-col items-center justify-center">
+            <h3 className="text-lg font-semibold mb-2">Total Payouts</h3>
+            <p className="text-3xl font-extrabold tracking-wide">RM15,000</p>
+          </div>
 
-        <Card className="shadow-md">
-          <CardHeader title="Pending Payouts" />
-          <CardContent>
-            <Typography variant="h5" className="font-bold">RM5,000</Typography>
-            <Typography color="text.secondary">Awaiting Approval</Typography>
-          </CardContent>
-        </Card>
+          {/* Pending Payouts Card */}
+          <div className="flex-1 bg-gradient-to-r from-yellow-400 to-yellow-600 text-gray-900 rounded-lg shadow-md p-6 flex flex-col items-center justify-center">
+            <h3 className="text-lg font-semibold mb-2">Pending Payouts</h3>
+            <p className="text-3xl font-extrabold tracking-wide">RM5,000</p>
+            <p className="mt-1 text-sm font-medium opacity-80">Awaiting Approval</p>
+          </div>
+        </div>
       </div>
+
 
       {/* Charts Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -86,9 +108,24 @@ const RevenueManagement = () => {
           <CardHeader title="Monthly Revenue" />
           <CardContent>
             <BarChart
-              xAxis={[{ id: 'months', data: months, scaleType: 'band' }]}
-              series={[{ data: revenueData }]}
               height={300}
+              xAxis={[
+                {
+                  id: "months",
+                  data: months,
+                  scaleType: "band",
+                },
+              ]}
+              series={[
+                {
+                  data: monthlyRevenue,
+                  label: "Revenue (RM)",
+                  color: "#1976d2", // MUI primary color blue
+                },
+              ]}
+              padding={{ left: 60, bottom: 40 }}
+              xAxisLabel="Month"
+              yAxisLabel="Revenue (RM)"
             />
           </CardContent>
         </Card>
