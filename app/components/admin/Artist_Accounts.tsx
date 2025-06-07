@@ -169,12 +169,10 @@ export default function ArtistAccounts() {
               <TableRow className="bg-gray-100">
                 <TableCell>Artist</TableCell>
                 <TableCell>Email</TableCell>
-                <TableCell>Status</TableCell>
                 <TableCell>Total Songs</TableCell>
                 <TableCell>Total Albums</TableCell>
                 <TableCell>Earnings ($)</TableCell>
                 <TableCell>Joined</TableCell>
-                <TableCell>Actions</TableCell>
               </TableRow>
             </TableHead>
 
@@ -188,13 +186,13 @@ export default function ArtistAccounts() {
                     </div>
                   </TableCell>
                   <TableCell className="whitespace-nowrap">{artist.email}</TableCell>
-                  <TableCell>
+                  {/* <TableCell>
                     <Chip
                       label={artist.status}
                       color={getStatusColor(artist.status)}
                       size="small"
                     />
-                  </TableCell>
+                  </TableCell> */}
 
                   {/* For mobile view, show ellipsis and modal on click */}
                   <TableCell className="hidden md:table-cell">{artist.totalSongs}</TableCell>
@@ -203,20 +201,6 @@ export default function ArtistAccounts() {
                     ${artist.earnings.toLocaleString()}
                   </TableCell>
                   <TableCell className="hidden md:table-cell">{artist.joined}</TableCell>
-
-                  <TableCell>
-                    <div className="flex flex-col md:flex-row gap-2">
-                      <Button size="small" variant="outlined" color="primary">
-                        View
-                      </Button>
-                      <Button size="small" variant="outlined" color="secondary">
-                        Edit
-                      </Button>
-                      <Button size="small" variant="outlined" color="error">
-                        Block
-                      </Button>
-                    </div>
-                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>
